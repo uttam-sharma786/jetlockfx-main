@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "jetlockfx", // Your Project ID
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "jetlockfx.appspot.com", // Your Cloud Storage Bucket
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "75333179968", // Your Messaging Sender ID (Project Number)
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "YOUR_APP_ID_FROM_FIREBASE_CONSOLE", // <<== Get this from Project Settings!
+  // appId: import.meta.env.VITE_FIREBASE_APP_ID || "YOUR_APP_ID_FROM_FIREBASE_CONSOLE", // <<== Get this from Project Settings!
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-490328172" // Your Google Analytics Measurement ID
 };
 
