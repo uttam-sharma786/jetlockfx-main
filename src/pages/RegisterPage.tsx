@@ -1,0 +1,163 @@
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { DollarSign } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+
+const RegisterPage: React.FC = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { register } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!name || !email || !password || !confirmPassword) {
+      return setError('Please fill in all fields');
+    }
+    
+    if (password !== confirmPassword) {
+      return setError('Passwords do not match');
+    }
+    
+    if (password.length < 6) {
+      return setError('Password must be at least 6 characters');
+    }
+    
+    try {
+      setError('');
+      setLoading(true);
+      await register(email, password, name);
+      navigate('/dashboard');
+    } catch (err: any) {
+      console.error('Registration error:', err);
+      setError(err.message || 'Failed to create an account');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="card max-w-md w-full p-8 animate-fade-in">
+        <div className="text-center mb-8">
+          <Link to="/" className="inline-flex items-center justify-center">
+            <DollarSign className="h-10 w-10 text-primary-600" />
+          </Link>
+          <h2 className="mt-4 text-3xl font-bold text-gray-900">Create an account</h2>
+          <p className="mt-2 text-gray-600">
+            Start securing your exchange rates today
+          </p>
+        </div>
+
+        {error && (
+          <div className="mb-4 p-3 bg-error-50 border border-error-200 text-error-700 rounded-md text-sm">
+            {error}
+          </div>
+        )}
+
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name" className="label">
+              Full name
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="input"
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="label">
+              Email address
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="input"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="new-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="input"
+              placeholder="Create a password (min. 6 characters)"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="confirmPassword" className="label">
+              Confirm password
+            </label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              autoComplete="new-password"
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="input"
+              placeholder="Confirm your password"
+            />
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary w-full"
+            >
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></span>
+                  Creating account...
+                </span>
+              ) : (
+                'Create account'
+              )}
+            </button>
+          </div>
+        </form>
+
+        <div className="mt-6 text-center">
+          <p className="text-gray-600">
+            Already have an account?{' '}
+            <Link to="/login" className="text-primary-600 hover:text-primary-500 font-medium">
+              Sign in
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RegisterPage;
