@@ -48,7 +48,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenus}>
             {/* <DollarSign className="w-7 h-7 text-primary-600" /> */}
-            <img src="images/logo/Exchange.jpeg" width={70} height={70} alt="logo" />
+            <img src="/images/logo/Exchange.jpeg" width={70} height={70} alt="logo" />
             <span className="text-xl font-bold text-gray-800">JetLockFX</span>
           </Link>
 

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               {/* <DollarSign className="w-7 h-7 text-primary-400" /> */}
-              <img src="images/logo/Exchange.jpeg" width={70} height={70} alt="logo" />
+              <img src="/images/logo/Exchange.jpeg" width={70} height={70} alt="logo" />
               <span className="text-xl font-bold text-white">JetLockFX</span>
             </Link>
             <p className="text-gray-400 mb-4">
