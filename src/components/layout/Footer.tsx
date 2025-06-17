@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DollarSign, Twitter, Facebook, Instagram, Github as GitHub } from 'lucide-react';
+import { DollarSign, Twitter, Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-8">
+    <footer className="bg-black text-white pt-12 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and about */}
@@ -17,9 +17,12 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white">JetLockFX</span>
             </Link>
             <p className="text-gray-400 mb-4">
-              Secure your best exchange rates with our rate-lock technology. 
+               Home for Exchange
               Fast, reliable, and transparent foreign exchange.
             </p>
+             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+          <p>© {currentYear} JetLockFX Exchange. All rights reserved.</p>
+        </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Twitter className="w-5 h-5" />
@@ -30,9 +33,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <GitHub className="w-5 h-5" />
-              </a>
+              
             </div>
           </div>
 
@@ -65,11 +66,11 @@ const Footer: React.FC = () => {
 
           {/* Support */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Help Center
+                  About
                 </a>
               </li>
               <li>
@@ -83,7 +84,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="/src/content/term_condition.md" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Terms of Service
                 </a>
               </li>
@@ -119,9 +120,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>© {currentYear} JetLockFX Exchange. All rights reserved.</p>
-        </div>
+       
+      </div>
+       <div>
+      <h2 className="text-9xl bg-gradient-to-br from-indigo-900 to-indigo-600 bg-clip-text text-transparent text-center">JETLOCKFX</h2>
       </div>
     </footer>
   );

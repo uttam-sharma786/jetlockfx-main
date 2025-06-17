@@ -12,6 +12,8 @@ const RegisterPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const { register } = useAuth();
   const navigate = useNavigate();
+  const[acceptTerms,setAcceptTerms] = useState(false);
+  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,6 +28,9 @@ const RegisterPage: React.FC = () => {
     
     if (password.length < 6) {
       return setError('Password must be at least 6 characters');
+    }
+    if (!acceptTerms) {
+      return setError('Please accept the Terms and Conditions to continue');
     }
     
     try {
@@ -46,9 +51,9 @@ const RegisterPage: React.FC = () => {
       <div className="card max-w-md w-full p-8 animate-fade-in">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center justify-center">
-            <DollarSign className="h-10 w-10 text-primary-600" />
+            <DollarSign className="h-10 w-10 text-blue-900" />
           </Link>
-          <h2 className="mt-4 text-3xl font-bold text-gray-900">Create an account</h2>
+          <h2 className="mt-4 text-3xl font-bold text-gray-900">New Tourist Sign-up</h2>
           <p className="mt-2 text-gray-600">
             Start securing your exchange rates today
           </p>
@@ -128,6 +133,49 @@ const RegisterPage: React.FC = () => {
               placeholder="Confirm your password"
             />
           </div>
+
+
+
+        <div className="flex items-start space-x-3">
+            <div className="flex items-center h-5">
+              <input
+                id="accept-terms"
+                name="accept-terms"
+                type="checkbox"
+                checked={acceptTerms}
+                onChange={(e) => setAcceptTerms(e.target.checked)}
+                className="h-4 w-4 text-primary-900 border-gray-300 rounded focus:ring-primary-500 focus:ring-2"
+                required
+              />
+            </div>
+            <div className="text-sm">
+              <label htmlFor="accept-terms" className="text-gray-700">
+                I agree to the{' '}
+                <Link 
+                  to="/terms" 
+                  className="text-primary-600 hover:text-primary-500 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms and Conditions
+                </Link>
+                {' '}and{' '}
+                <Link 
+                  to="/privacy" 
+                  className="text-primary-600 hover:text-primary-500 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </Link>
+              </label>
+            </div>
+          </div>
+
+
+          
+
+
 
           <div>
             <button

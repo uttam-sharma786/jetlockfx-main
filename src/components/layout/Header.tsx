@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
+
 const Header: React.FC = () => {
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-zinc-100 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -56,6 +57,15 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
               Home
+            </Link>
+            <Link to= "/AboutPage" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
+              About
+            </Link>
+            <Link to= "/PilotTab" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
+              Pilot Tab
+            </Link>
+            <Link to="/ContactPage" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
+              Contact
             </Link>
 
             {currentUser ? (

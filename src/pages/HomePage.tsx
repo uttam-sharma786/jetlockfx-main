@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, DollarSign, Zap } from 'lucide-react';
 import CurrencyConverter from '../components/exchange/CurrencyConverter';
 import { useAuth } from '../contexts/AuthContext';
+import Faq from"../components/layout/Faq";
+
 
 const HomePage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -10,30 +12,34 @@ const HomePage: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-800 to-primary-900 text-black py-16 md:py-24">
+      <section className="bg-blue-900 text-black py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 space-y-6">
               <h1 className="text-4xl md:text-5xl text-white lg:text-6xl font-bold leading-tight">
-                Lock in Your Best Exchange Rates
+                Lock your best exchange rate in seconds.
               </h1>
               <p className="text-lg md:text-xl text-primary-100">
-                Secure favorable currency exchange rates for 24 hours with our rate-lock technology. Fast, reliable, and transparent foreign exchange.
+                Secure favorable currency exchange rates for 24 hours with our rate-lock technology. <br/>
+                Fast, reliable, and transparent foreign exchange.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 {currentUser ? (
-                  <Link to="/rate-lock" className="btn-accent btn-lg">
-                    Lock Your Rate Now
+                  <Link to="/register" className="btn-accent btn-lg">
+                    sign Up Now
                   </Link>
                 ) : (
-                  <>
-                    <Link to="/register" className="btn-accent btn-lg">
-                      Get Started
+                  <div className="flex gap-4">
+                    <Link to="/register" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
+                    Try Demo Now
                     </Link>
-                    <Link to="/login" className="btn-outline bg-transparent border-white text-white hover:bg-white/10">
-                      Log In
+                    <Link to="/contact" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
+                    Contact Us
                     </Link>
-                  </>
+                    <Link to="/pilot" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
+                    Pilot
+                    </Link>
+                  </div>
                 )}
               </div>
             </div>
@@ -83,7 +89,7 @@ const HomePage: React.FC = () => {
 
             {/* Feature 3 */}
             <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
-              <div className="bg-accent-100 text-accent-700 p-3 rounded-full w-fit mb-4">
+              <div className="bg-accent-100 text-blue-900 p-3 rounded-full w-fit mb-4">
                 <DollarSign className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">QR Code Transactions</h3>
@@ -182,90 +188,68 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* How it works */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              What Our Users Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Thousands of users trust our platform for their currency exchange needs
-            </p>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        How it works
+      </h2>
+      {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Thousands of users trust our platform for their currency exchange needs
+      </p> */}
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                <img 
-                  src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                  alt="User" 
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold">Sarah Johnson</h4>
-                  <p className="text-gray-500">Business Traveler</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "The rate-lock feature has saved me so much money during my business trips. I can lock in a rate when the market is favorable and use it later."
-              </p>
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {/* Register Bureaus */}
+      <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
+        <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+          For Exchange Bureaus
+        </h4>
+        <p className="text-gray-600 mb-6 text-lg">
+          Boost your visibility<br />
+          Free listing pilot now
+        </p>
+        <Link to="/register" className="btn-accent btn-lg">
+          List Your Bureau
+        </Link>
+      </div>
 
-            {/* Testimonial 2 */}
-            <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                <img 
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                  alt="User" 
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold">Michael Chen</h4>
-                  <p className="text-gray-500">International Student</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "As a student receiving money from home, the QR code feature makes it easy to show the exact rate to my parents. No more confusion about exchange rates!"
-              </p>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                <img 
-                  src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                  alt="User" 
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold">Emma Rodriguez</h4>
-                  <p className="text-gray-500">Small Business Owner</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "My import business depends on stable exchange rates. This platform gives me the security to know exactly what I'll pay for international orders."
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Register Tourists */}
+      <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
+        <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+          For Tourists and Public
+        </h4>
+        <p className="text-gray-600 mb-6 text-lg">
+          Compare, lock, and exchange smarter wherever you jet
+        </p>
+        <Link to="/register" className="btn-accent btn-lg">
+          Register Here
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+      <section>
+        <Faq />
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary-900 text-white py-16">
+      <section className="bg-gradient-to-br from-indigo-900 to-indigo-600  text-white py-16 ">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Lock in Your Exchange Rates?
           </h2>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
-            Join thousands of users who are already saving money with our rate-lock technology.
+            Supercharge your Travel Experience with JetLockFx .
           </p>
           <Link to={currentUser ? "/rate-lock" : "/register"} className="btn-accent btn-lg">
             {currentUser ? "Lock Your Rate Now" : "Create Free Account"}
           </Link>
         </div>
       </section>
+
+      
     </div>
   );
 };
