@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {[
                   { href: "/about", label: "About Us" },
-                  { href: "/careers", label: "Careers" },
+                  // { href: "/careers", label: "Careers" },
                   { href: "/contact", label: "Contact Us" },
                   { href: "/terms", label: "Terms of Service" },
                   { href: "/privacy", label: "Privacy Policy" }
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   <li key={link.href}>
                     <a 
                       href={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 transform inline-block"
+                      className="text-gray-300 hover:text-blue-900 transition-colors duration-200 hover:translate-x-1 transform inline-block"
                     >
                       {link.label}
                     </a>
@@ -145,9 +145,9 @@ const Footer: React.FC = () => {
               <a href="/compliance" className="hover:text-blue-400 transition-colors duration-200">
                 Compliance
               </a>
-              <a href="/api" className="hover:text-blue-400 transition-colors duration-200">
+              {/* <a href="/api" className="hover:text-blue-400 transition-colors duration-200">
                 API
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

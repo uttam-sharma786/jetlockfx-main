@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-indigo-200">
+      {/* <section className="py-16 bg-indigo-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -64,9 +64,9 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> */}
             {/* Feature 1 */}
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-primary-100 text-primary-700 p-3 rounded-full w-fit mb-4">
                 <Shield className="w-6 h-6" />
               </div>
@@ -74,10 +74,10 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600">
                 Lock in favorable exchange rates for 24 hours to protect against market fluctuations.
               </p>
-            </div>
+            </div> */}
 
             {/* Feature 2 */}
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-secondary-100 text-secondary-700 p-3 rounded-full w-fit mb-4">
                 <Clock className="w-6 h-6" />
               </div>
@@ -85,10 +85,10 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600">
                 Access up-to-the-minute exchange rates from global currency markets.
               </p>
-            </div>
+            </div> */}
 
             {/* Feature 3 */}
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-accent-100 text-blue-900 p-3 rounded-full w-fit mb-4">
                 <DollarSign className="w-6 h-6" />
               </div>
@@ -96,10 +96,10 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600">
                 Generate QR codes for locked rates to easily share or redeem your exchange.
               </p>
-            </div>
+            </div> */}
 
             {/* Feature 4 */}
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-success-100 text-success-700 p-3 rounded-full w-fit mb-4">
                 <Zap className="w-6 h-6" />
               </div>
@@ -110,10 +110,10 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works Section */}
-      <section className="py-16 bg-lime-200">
+      {/* <section className="py-16 bg-lime-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-600 mb-4">
@@ -124,9 +124,9 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
             {/* Step 1 */}
-            <div className="bg-white rounded-xl p-8 shadow-sm relative">
+            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 1
               </div>
@@ -141,10 +141,10 @@ const HomePage: React.FC = () => {
                 alt="Currency selection" 
                 className="rounded-lg w-full h-40 object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Step 2 */}
-            <div className="bg-white rounded-xl p-8 shadow-sm relative">
+            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 2
               </div>
@@ -159,10 +159,10 @@ const HomePage: React.FC = () => {
                 alt="Locking rate" 
                 className="rounded-lg w-full h-40 object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Step 3 */}
-            <div className="bg-white rounded-xl p-8 shadow-sm relative">
+            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 3
               </div>
@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How it works */}
       <section className="py-16 bg-white">
