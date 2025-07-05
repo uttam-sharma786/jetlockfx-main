@@ -12,6 +12,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import ExchangeLogo from './images/logo/Exchange.jpeg';
 
 
 const Header: React.FC = () => {
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenus}>
             {/* <DollarSign className="w-7 h-7 text-primary-600" /> */}
-            <img src="./images/logo/Exchange.jpeg" width={70} height={70} alt="jetlock_logo" />
+            <img src={ExchangeLogo} width={70} height={70} alt="exchange_logo" />            <span className="text-xl font-bold text-gray-800">JetLockFX</span>
             <span className="text-xl font-bold text-gray-800">JetLockFX</span>
           </Link>
 
