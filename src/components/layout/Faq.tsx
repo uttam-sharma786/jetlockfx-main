@@ -60,7 +60,7 @@ const Accordion: React.FC<AccordionProps> = ({
   items = DEFAULT_ITEMS, 
   allowMultiple = false,
   defaultOpenItems = [],
-  searchable = true,
+  searchable = false,
   className = '',
   onItemToggle
 }) => {
@@ -111,10 +111,10 @@ const Accordion: React.FC<AccordionProps> = ({
             Frequently Asked Questions
           </h2>
         </div>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        {/* <p className="text-gray-600 max-w-2xl mx-auto">
           Find answers to common questions about JetLock FX. Can't find what you're looking for? 
           Contact our support team.
-        </p>
+        </p> */}
       </div>
 
       {/* Search */}
@@ -219,7 +219,7 @@ const Accordion: React.FC<AccordionProps> = ({
       </div>
 
       {/* Footer */}
-      <div className="mt-8 text-center">
+      {/* <div className="mt-8 text-center">
         <p className="text-gray-600 mb-4">
           Still have questions?
         </p>
@@ -230,7 +230,7 @@ const Accordion: React.FC<AccordionProps> = ({
           <HelpCircle className="w-5 h-5" />
           Contact Support
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

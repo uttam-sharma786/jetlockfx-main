@@ -54,18 +54,21 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
               Home
             </Link>
             <Link to= "/AboutPage" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
               About
             </Link>
-            <Link to= "/PilotTab" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
+            {/* <Link to= "/PilotTab" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
               Pilot Tab
-            </Link>
+            </Link> */}
             <Link to="/ContactPage" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
               Contact
+            </Link>
+            <Link to="/Faq" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
+              FAQ
             </Link>
 
             {currentUser ? (

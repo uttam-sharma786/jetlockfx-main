@@ -17,12 +17,13 @@ const HomePage: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 space-y-6">
               <h1 className="text-4xl md:text-5xl text-white lg:text-6xl font-bold leading-tight">
-                Lock your best exchange rate in seconds.
+                Lock in secure Currency.<br/>
+                Wherver you jet
               </h1>
-              <p className="text-lg md:text-xl text-primary-100">
+              {/* <p className="text-lg md:text-xl text-primary-100">
                 Secure favorable currency exchange rates for 24 hours with our rate-lock technology. <br/>
                 Fast, reliable, and transparent foreign exchange.
-              </p>
+              </p> */}
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 {currentUser ? (
                   <Link to="/register" className="btn-accent btn-lg">
@@ -231,11 +232,11 @@ const HomePage: React.FC = () => {
   </div>
 </section>
       <section>
-        <Faq />
+        
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-indigo-900 to-indigo-600  text-white py-16 ">
+      {/* <section className="bg-gradient-to-br from-indigo-900 to-indigo-600  text-white py-16 ">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Lock in Your Exchange Rates?
@@ -247,7 +248,7 @@ const HomePage: React.FC = () => {
             {currentUser ? "Lock Your Rate Now" : "Create Free Account"}
           </Link>
         </div>
-      </section>
+      </section> */}
 
       
     </div>

@@ -14,6 +14,7 @@ import DashboardPage from './pages/DashboardPage';
 import RateLockPage from './pages/RateLockPage';
 import TransactionsPage from './pages/TransactionsPage';
 import ProfilePage from './pages/ProfilePage';
+import Faq from './components/layout/Faq';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
               <Route path="AboutPage" element={<AboutPage/>} />
               <Route path="ContactPage" element={<ContactPage/>} />
               <Route path="PilotTab" element={<Pilot />} />
+              <Route path="Faq" element={<Faq />}/>
+
               
               {/* Protected routes */}
               <Route path="dashboard" element={
