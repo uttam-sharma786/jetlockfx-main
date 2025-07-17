@@ -120,12 +120,12 @@ const Header: React.FC = () => {
               </>
             ) : (
               <div className="flex items-center space-x-4">
-                <Link
+                {/* <Link
                   to="/login"
                   className="text-gray-600 hover:text-primary-600 transition-colors duration-200"
                 >
                   Log in
-                </Link>
+                </Link> */}
                 <Link
                   to="/register"
                   className="btn-primary"
