@@ -141,21 +141,21 @@ const ContactPage: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@jetock.com',
-      href: 'mailto:info@jetock.com'
+      value: 'info@jetlockfx.com',
+      href: 'info@jetlockfx.com'
     },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
-    },
-    {
-      icon: MapPin,
-      label: 'Address',
-      value: '123 Business St, Suite 100\nNew York, NY 10001',
-      href: 'https://maps.google.com'
-    }
+    // {
+    //   icon: Phone,
+    //   label: 'Phone',
+    //   value: '+1 (555) 123-4567',
+    //   href: 'tel:+15551234567'
+    // },
+    // {
+    //   icon: MapPin,
+    //   label: 'Address',
+    //   value: '123 Business St, Suite 100\nNew York, NY 10001',
+    //   href: 'https://maps.google.com'
+    // }
   ];
 
   return (
