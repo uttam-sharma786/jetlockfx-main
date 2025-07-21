@@ -40,16 +40,16 @@ const Footer: React.FC = () => {
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span>support@jetlockfx.com</span>
+                  <span>Ozuna.Elsa@gmail.com</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                {/* <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5 text-blue-400" />
                   <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                </div> */}
+                {/* <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-5 h-5 text-blue-400" />
                   <span>New York, NY 10001</span>
-                </div>
+                </div> */}
               </div>
 
               {/* Social Links */}
