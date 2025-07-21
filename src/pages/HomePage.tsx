@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Clock, DollarSign, Zap } from 'lucide-react';
-import CurrencyConverter from '../components/exchange/CurrencyConverter';
-import { useAuth } from '../contexts/AuthContext';
-import Faq from"../components/layout/Faq";
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Clock, DollarSign, Zap } from "lucide-react";
+import CurrencyConverter from "../components/exchange/CurrencyConverter";
+import { useAuth } from "../contexts/AuthContext";
+import Faq from "../components/layout/Faq";
 
 const HomePage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -16,9 +15,11 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 space-y-6">
-              <h1 className="text-4xl md:text-5xl text-white lg:text-6xl font-bold leading-tight">
-                Lock in secure Currency.<br/>
-                Wherver you jet
+              <h1 className="text-2xl md:text-3xl text-white lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
+                Dreaming of real estate, domestic or abroad?{" "}
+                <span className="block mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-gray-100">
+                  Whether buying, investing, or selling, we can help.
+                </span>
               </h1>
               {/* <p className="text-lg md:text-xl text-primary-100">
                 Secure favorable currency exchange rates for 24 hours with our rate-lock technology. <br/>
@@ -31,15 +32,23 @@ const HomePage: React.FC = () => {
                   </Link>
                 ) : (
                   <div className="flex gap-4">
-                    <Link to="/register" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
-                    Try Demo Now
-                    </Link>
-                    <Link to="/contact" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
+                    {/* <Link to="/register" className="btn-accent text-white border-2 border-white btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
+                    Yes, I’m interested
+                    </Link> */}
+                    {/* <Link to="/contact" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
                     Contact Us
                     </Link>
                     <Link to="/pilot" className="btn-accent text-white border-2 border-indigo-600 btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200">
                     Pilot
-                    </Link>
+                    </Link> */}
+                    <a
+                      href="https://docs.google.com/forms/d/1kvEIv-lJtk1kxkfCfnN6HLOwfFI7dqSfzaUeJe_7Pxk/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-accent text-white border-2 border-white btn-lg hover:bg-indigo-700 hover:border-indigo-700 transition-colors duration-200"
+                    >
+                      Yes, I'm interested
+                    </a>
                   </div>
                 )}
               </div>
@@ -66,8 +75,8 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> */}
-            {/* Feature 1 */}
-            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+      {/* Feature 1 */}
+      {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-primary-100 text-primary-700 p-3 rounded-full w-fit mb-4">
                 <Shield className="w-6 h-6" />
               </div>
@@ -77,8 +86,8 @@ const HomePage: React.FC = () => {
               </p>
             </div> */}
 
-            {/* Feature 2 */}
-            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+      {/* Feature 2 */}
+      {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-secondary-100 text-secondary-700 p-3 rounded-full w-fit mb-4">
                 <Clock className="w-6 h-6" />
               </div>
@@ -88,8 +97,8 @@ const HomePage: React.FC = () => {
               </p>
             </div> */}
 
-            {/* Feature 3 */}
-            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+      {/* Feature 3 */}
+      {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-accent-100 text-blue-900 p-3 rounded-full w-fit mb-4">
                 <DollarSign className="w-6 h-6" />
               </div>
@@ -99,8 +108,8 @@ const HomePage: React.FC = () => {
               </p>
             </div> */}
 
-            {/* Feature 4 */}
-            {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+      {/* Feature 4 */}
+      {/* <div className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
               <div className="bg-success-100 text-success-700 p-3 rounded-full w-fit mb-4">
                 <Zap className="w-6 h-6" />
               </div>
@@ -126,8 +135,8 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
-            {/* Step 1 */}
-            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
+      {/* Step 1 */}
+      {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 1
               </div>
@@ -144,8 +153,8 @@ const HomePage: React.FC = () => {
               />
             </div> */}
 
-            {/* Step 2 */}
-            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
+      {/* Step 2 */}
+      {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 2
               </div>
@@ -162,8 +171,8 @@ const HomePage: React.FC = () => {
               />
             </div> */}
 
-            {/* Step 3 */}
-            {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
+      {/* Step 3 */}
+      {/* <div className="bg-white rounded-xl p-8 shadow-sm relative">
               <div className="bg-primary-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold mb-4">
                 3
               </div>
@@ -191,49 +200,48 @@ const HomePage: React.FC = () => {
 
       {/* How it works */}
       <section className="py-16 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        How it works
-      </h2>
-      {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              How it works
+            </h2>
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
         Thousands of users trust our platform for their currency exchange needs
       </p> */}
-    </div>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      {/* Register Bureaus */}
-      <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
-        <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-          For Exchange Bureaus
-        </h4>
-        <p className="text-gray-600 mb-6 text-lg">
-          Boost your visibility<br />
-          Free listing pilot now
-        </p>
-        <Link to="/register" className="btn-accent btn-lg">
-          List Your Bureau
-        </Link>
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Register Bureaus */}
+            <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
+              <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                For Exchange Bureaus
+              </h4>
+              <p className="text-gray-600 mb-6 text-lg">
+                Boost your visibility
+                <br />
+                Free listing pilot now
+              </p>
+              <Link to="/register" className="btn-accent btn-lg">
+                List Your Bureau
+              </Link>
+            </div>
 
-      {/* Register Tourists */}
-      <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
-        <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-          For Tourists and Public
-        </h4>
-        <p className="text-gray-600 mb-6 text-lg">
-          Compare, lock, and exchange smarter wherever you jet
-        </p>
-        <Link to="/register" className="btn-accent btn-lg">
-          Register Here
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
-      <section>
-        
+            {/* Register Tourists */}
+            <div className="bg-gray-50 rounded-xl p-8 shadow-sm text-center">
+              <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                For Tourists and Public
+              </h4>
+              <p className="text-gray-600 mb-6 text-lg">
+                Compare, lock, and exchange smarter wherever you jet
+              </p>
+              <Link to="/register" className="btn-accent btn-lg">
+                Register Here
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
+      <section></section>
 
       {/* CTA Section */}
       {/* <section className="bg-gradient-to-br from-indigo-900 to-indigo-600  text-white py-16 ">
@@ -249,8 +257,6 @@ const HomePage: React.FC = () => {
           </Link>
         </div>
       </section> */}
-
-      
     </div>
   );
 };
