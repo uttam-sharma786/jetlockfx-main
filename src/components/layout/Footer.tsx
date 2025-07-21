@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span>Ozuna.Elsa@gmail.com</span>
+                  <span>info@jetlockfx.com.</span>
                 </div>
                 {/* <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5 text-blue-400" />
