@@ -120,12 +120,8 @@ All colors MUST be HSL.
   }
 }
 
-@layer base {
-  * {
+@layer utilities {
+  .border-border {
     border-color: hsl(var(--border));
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 }
