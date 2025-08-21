@@ -120,12 +120,12 @@ All colors MUST be HSL.
   }
 }
 
-/* @layer base {
+@layer base {
   * {
-    @apply border-gray-200 dark:border-gray-800;
+    @apply border-border;
   }
 
   body {
-    @apply  text-foreground;
+    @apply bg-background text-foreground;
   }
-} */
+}
