@@ -120,7 +120,7 @@ All colors MUST be HSL.
   }
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-gray-200 dark:border-gray-800;
   }
@@ -128,4 +128,4 @@ All colors MUST be HSL.
   body {
     @apply  text-foreground;
   }
-}
+} */
