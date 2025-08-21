@@ -79,17 +79,17 @@ All colors MUST be HSL.
 
   .dark {
     /* Dark mode - enhanced contrast for visibility */
-    --background: 224 71% 4%;
+    /* --background: 224 71% 4%;
     --foreground: 210 40% 98%;
 
     --card: 224 71% 4%;
     --card-foreground: 210 40% 98%;
 
     --popover: 224 71% 4%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 210 40% 98%; */
 
     /* Dark mode primary - enhanced visibility */
-    --primary: 200 85% 60%;
+    /* --primary: 200 85% 60%;
     --primary-foreground: 224 71% 4%;
 
     --secondary: 215 28% 15%;
@@ -106,7 +106,7 @@ All colors MUST be HSL.
 
     --border: 215 28% 20%;
     --input: 215 28% 15%;
-    --ring: 200 85% 60%; */
+    --ring: 200 85% 60%; */ */
     
     /* Dark sidebar */
     /* --sidebar-background: 240 5.9% 10%;
@@ -120,7 +120,7 @@ All colors MUST be HSL.
   }
 } */
 
-@layer base {
+/* @layer base {
   * {
     border-color: var(--border);
   }
@@ -128,4 +128,4 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
