@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "howItWorks": "Cómo Funciona",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Asegura tu moneda,",
+    "titleSpan": "donde quiera que vayas.",
+    "subtitle": "Encuentra las mejores tasas de cambio, asegura tu moneda y viaja con confianza. Compara tasas de casas de cambio confiables en tiempo real.",
+    "primaryCTA": "Comenzar a Comparar Tasas",
+    "secondaryCTA": "Ver Demo",
+    "socialProof": "Confiado por más de 50,000 viajeros en todo el mundo",
+    "trustIndicator1": "Seguro y Licenciado",
+    "trustIndicator2": "Tasas en Tiempo Real",
+    "trustIndicator3": "4.9★ Calificación"
+  },
+  "exchange": {
+    "title": "Las mejores tasas de cambio cerca de ti",
+    "subtitle": "Tasas en vivo actualizadas cada minuto. Compara y reserva las mejores ofertas al instante.",
+    "fromLabel": "Quiero cambiar",
+    "toLabel": "Por",
+    "amountLabel": "Cantidad",
+    "cityLabel": "Ciudad",
+    "searchButton": "Buscar Mejores Tasas",
+    "selectCurrency": "Seleccionar moneda",
+    "selectCity": "Seleccionar ciudad"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Obtener la mejor tasa de cambio es simple con nuestro proceso de tres pasos",
+    "step1Title": "Buscar tasas cercanas",
+    "step1Description": "Encuentra las mejores tasas de cambio en tu área con precios en tiempo real",
+    "step2Title": "Bloquear la mejor tasa",
+    "step2Description": "Asegura tu tasa preferida y reserva tu cambio de moneda",
+    "step3Title": "Recoger tu efectivo",
+    "step3Description": "Visita la ubicación y recoge tu moneda cambiada de forma segura"
+  },
+  "userTypes": {
+    "touristTitle": "Para Turistas",
+    "touristDescription": "Encuentra la mejor tasa local en línea y viaja con confianza sabiendo que obtienes el máximo valor por tu dinero.",
+    "touristButton": "Registrarse como Viajero",
+    "bureauTitle": "Para Casas de Cambio",
+    "bureauDescription": "Aumenta la visibilidad, administra tasas en línea y conecta con viajeros que buscan las mejores ofertas de cambio de moneda.",
+    "bureauButton": "Únete Gratis"
+  },
+  "results": {
+    "recommended": "Recomendado",
+    "distance": "Distancia",
+    "perUsd": "por USD",
+    "compare": "Comparar",
+    "viewMap": "Ver Mapa",
+    "reserve": "Reservar Ahora",
+    "bestRate": "Mejor Tasa",
+    "nearby": "Cercanos",
+    "available": "Disponible",
+    "verified": "Verificados", 
+    "verifiedBadge": "Verificado",
+    "openUntil": "Abierto hasta",
+    "loadMore": "Cargar Más Resultados"
+  },
+  "betaFeedback": {
+    "betaBadge": "BETA",
+    "title": "¡Ayúdanos a Mejorar - Comparte Tu Opinión!",
+    "subtitle": "Estamos en pruebas beta y tu opinión es invaluable. Participa en nuestra encuesta según tu tipo de usuario para ayudarnos a construir la mejor plataforma de cambio de moneda.",
+    "travelersTitle": "Viajeros",
+    "travelersDescription": "Comparte tus experiencias de viaje y cambio de moneda",
+    "businessTitle": "Empresas No Financieras",
+    "businessDescription": "Cuéntanos sobre las necesidades de moneda de tu empresa",
+    "bureauTitle": "Casa de Cambio",
+    "bureauDescription": "Ayúdanos a entender las operaciones de casas de cambio",
+    "takeSurvey": "Participar en Encuesta",
+    "thankYou": "¡Gracias por ayudarnos a mejorar JetLock FX!"
+  },
+  "realEstate": {
+    "title": "¿Sueñas con bienes raíces, nacionales o en el extranjero?",
+    "description": "Ya sea comprando, invirtiendo o vendiendo, podemos ayudarte.",
+    "button": "Sí, estoy interesado"
+  },
+  "footer": {
+    "followUs": "Síguenos",
+    "copyright": "© 2024 JetLock FX. Todos los derechos reservados. | Cambio de moneda seguro donde quiera que viajes."
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español"
+  }
+}

@@ -2,107 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
 @layer base {
-  html {
-    @apply antialiased;
+  :root {
+    /* High contrast base colors for optimal readability */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    /* Card system with enhanced contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    /* Popover with strong contrast */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Primary brand - enhanced contrast */
+    --primary: 200 85% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 85% 50%;
+
+    /* Secondary - optimized gray scale */
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 200 50% 20%;
+
+    /* Muted - enhanced for form labels */
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 25% 20%;
+
+    /* Accent - balanced teal */
+    --accent: 175 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success - clear and accessible */
+    --success: 142 76% 30%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive - accessible red */
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Form elements - enhanced contrast */
+    --border: 214 32% 75%;
+    --input: 0 0% 100%;
+    --ring: 200 85% 40%;
+
+    /* Enhanced gradients with better contrast */
+    --gradient-primary: linear-gradient(135deg, hsl(200 85% 40%), hsl(200 85% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 85% 40%) 0%, hsl(175 60% 40%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 94%));
+
+    /* Enhanced shadows for better depth */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.12), 0 1px 2px 0 hsl(0 0% 0% / 0.08);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.15), 0 2px 4px -1px hsl(0 0% 0% / 0.08);
+    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.15), 0 4px 6px -2px hsl(0 0% 0% / 0.08);
+
+    /* Smooth transitions for better UX */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  
+
+  .dark {
+    /* Dark mode - enhanced contrast for visibility */
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark mode primary - enhanced visibility */
+    --primary: 200 85% 60%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 215 28% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 28% 15%;
+    --muted-foreground: 217 33% 70%;
+
+    --accent: 175 60% 55%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 63% 40%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 15%;
+    --ring: 200 85% 60%;
+    
+    /* Dark sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
   body {
-    @apply font-sans text-gray-800 bg-gray-50 min-h-screen;
+    @apply bg-background text-foreground;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold leading-tight;
-  }
-  
-  h1 {
-    @apply text-3xl sm:text-4xl;
-  }
-  
-  h2 {
-    @apply text-2xl sm:text-3xl;
-  }
-  
-  h3 {
-    @apply text-xl sm:text-2xl;
-  }
-}
-
-@layer components {
-  .card {
-    @apply bg-white rounded-xl shadow-md overflow-hidden border border-gray-100;
-  }
-  
-  .card-glass {
-    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-md overflow-hidden border border-gray-100;
-  }
-  
-  .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-  }
-  
-  .btn-primary {
-    @apply btn bg-blue-900 text-white focus:ring-primary-500;
-  }
-  
-  .btn-secondary {
-    @apply btn bg-secondary-600 hover:bg-secondary-700 text-white focus:ring-secondary-500;
-  }
-  
-  .btn-accent {
-    @apply btn bg-blue-900 hover:bg-accent-600 text-white focus:ring-accent-400;
-  }
-  
-  .btn-outline {
-    @apply btn border border-gray-300 hover:bg-gray-100 text-gray-700 focus:ring-gray-300;
-  }
-  
-  .btn-sm {
-    @apply px-3 py-1 text-sm;
-  }
-  
-  .btn-lg {
-    @apply px-6 py-3 text-lg;
-  }
-  
-  .input {
-    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 bg-white/90 border px-4 py-2;
-  }
-  
-  .label {
-    @apply block text-sm font-medium text-gray-700 mb-1;
-  }
-  
-  .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-  
-  .badge-success {
-    @apply badge bg-success-100 text-success-800;
-  }
-  
-  .badge-warning {
-    @apply badge bg-warning-100 text-warning-800;
-  }
-  
-  .badge-error {
-    @apply badge bg-error-100 text-error-800;
-  }
-  
-  .badge-primary {
-    @apply badge bg-primary-100 text-primary-800;
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  @apply w-2;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-gray-100 rounded-full;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full hover:bg-gray-400;
 }

@@ -113,7 +113,6 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {[
                   { href: "/about", label: "About Us" },
-                  // { href: "/careers", label: "Careers" },
                   { href: "/contact", label: "Contact Us" },
                   { href: "/terms", label: "Terms of Service" },
                   { href: "/privacy", label: "Privacy Policy" }

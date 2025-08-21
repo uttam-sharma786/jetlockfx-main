@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Lock in secure currency,",
+    "titleSpan": "wherever you jet.",
+    "subtitle": "Find the best exchange rates, secure your currency, and travel with confidence. Compare rates from trusted bureaus in real-time.",
+    "primaryCTA": "Start Comparing Rates",
+    "secondaryCTA": "Watch Demo",
+    "socialProof": "Trusted by 50,000+ travelers worldwide",
+    "trustIndicator1": "Secure & Licensed",
+    "trustIndicator2": "Real-time Rates", 
+    "trustIndicator3": "4.9★ Rating"
+  },
+  "exchange": {
+    "title": "Best exchange rates near you",
+    "subtitle": "Live rates updated every minute. Compare and reserve the best deals instantly.",
+    "fromLabel": "I want to exchange",
+    "toLabel": "For",
+    "amountLabel": "Amount",
+    "cityLabel": "City",
+    "searchButton": "Find Best Rates",
+    "selectCurrency": "Select currency",
+    "selectCity": "Select city"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Getting the best exchange rate is simple with our three-step process",
+    "step1Title": "Search rates nearby",
+    "step1Description": "Find the best exchange rates in your area with real-time pricing",
+    "step2Title": "Lock the best rate",
+    "step2Description": "Secure your preferred rate and reserve your currency exchange",
+    "step3Title": "Pick up your cash",
+    "step3Description": "Visit the location and collect your exchanged currency safely"
+  },
+  "userTypes": {
+    "touristTitle": "For Tourists",
+    "touristDescription": "Find the best local rate online and travel with confidence knowing you're getting the most value for your money.",
+    "touristButton": "Register as Traveler",
+    "bureauTitle": "For Exchange Bureaus",
+    "bureauDescription": "Boost visibility, manage rates online, and connect with travelers looking for the best currency exchange deals.",
+    "bureauButton": "Join Free"
+  },
+  "results": {
+    "recommended": "Recommended",
+    "distance": "Distance",
+    "perUsd": "per USD",
+    "compare": "Compare",
+    "viewMap": "View Map",
+    "reserve": "Reserve Now",
+    "bestRate": "Best Rate",
+    "nearby": "Nearby",
+    "available": "Available", 
+    "verified": "Verified",
+    "verifiedBadge": "Verified",
+    "openUntil": "Open until",
+    "loadMore": "Load More Results"
+  },
+  "betaFeedback": {
+    "betaBadge": "BETA",
+    "title": "Help Us Improve - Share Your Feedback!",
+    "subtitle": "We're in beta testing and your input is invaluable. Take our survey based on your user type to help us build the best currency exchange platform.",
+    "travelersTitle": "Travelers",
+    "travelersDescription": "Share your travel and currency exchange experiences",
+    "businessTitle": "Non Financial Businesses", 
+    "businessDescription": "Tell us about your business currency needs",
+    "bureauTitle": "Bureau of Exchange",
+    "bureauDescription": "Help us understand exchange bureau operations",
+    "takeSurvey": "Take Survey",
+    "thankYou": "Thank you for helping us improve JetLock FX!"
+  },
+  "realEstate": {
+    "title": "Dreaming of real estate, domestic or abroad?",
+    "description": "Whether buying, investing, or selling, we can help.",
+    "button": "Yes, I'm interested"
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "copyright": "© 2024 JetLock FX. All rights reserved. | Secure currency exchange wherever you travel."
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español"
+  }
+}

@@ -17,52 +17,65 @@ import ProfilePage from './pages/ProfilePage';
 import Faq from './components/layout/Faq';
 import NotFoundPage from './pages/NotFoundPage';
 
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as Sonner } from "./components/ui/sonner";
+import { TooltipProvider } from "./components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Index from './pages';
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <AuthProvider>
-      <FxRateProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="login" element={<LoginPage />} />
-              <Route path="register" element={<RegisterPage />} />
-              <Route path="AboutPage" element={<AboutPage/>} />
-              <Route path="ContactPage" element={<ContactPage/>} />
-              <Route path="PilotTab" element={<Pilot />} />
-              <Route path="Faq" element={<Faq />}/>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <AuthProvider>
+          <FxRateProvider>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Index />}>
+                  {/* <Route index element={<HomePage />} /> */}
+                  {/* <Route path="login" element={<LoginPage />} /> */}
+                  {/* <Route path="register" element={<RegisterPage />} /> */}
+                  <Route path="about" element={<AboutPage />} />
+                  <Route path="contact" element={<ContactPage />} />
+                  {/* <Route path="pilot" element={<Pilot />} /> */}
+                  <Route path="faq" element={<Faq />} />
 
-              
-              {/* Protected routes */}
-              <Route path="dashboard" element={
-                <ProtectedRoute>
-                  <DashboardPage />
-                </ProtectedRoute>
-              } />
-              <Route path="rate-lock" element={
-                <ProtectedRoute>
-                  <RateLockPage />
-                </ProtectedRoute>
-              } />
-              <Route path="transactions" element={
-                <ProtectedRoute>
-                  <TransactionsPage />
-                </ProtectedRoute>
-              } />
-              <Route path="profile" element={
-                <ProtectedRoute>
-                  <ProfilePage />
-                </ProtectedRoute>
-              } />
-              
-              {/* Not found route */}
-              <Route path="not-found" element={<NotFoundPage />} />
-              <Route path="*" element={<Navigate to="/not-found" replace />} />
-            </Route>
-          </Routes>
-        </Router>
-      </FxRateProvider>
-    </AuthProvider>
+                  {/* Protected routes */}
+                  {/* <Route path="dashboard" element={
+                    <ProtectedRoute>
+                      <DashboardPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="rate-lock" element={
+                    <ProtectedRoute>
+                      <RateLockPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="transactions" element={
+                    <ProtectedRoute>
+                      <TransactionsPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="profile" element={
+                    <ProtectedRoute>
+                      <ProfilePage />
+                    </ProtectedRoute>
+                  } /> */}
+                  
+                  {/* Not found route */}
+                  <Route path="404" element={<NotFoundPage />} />
+                  <Route path="*" element={<Navigate to="/404" replace />} />
+                </Route>
+              </Routes>
+            </Router>
+          </FxRateProvider>
+        </AuthProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
 
