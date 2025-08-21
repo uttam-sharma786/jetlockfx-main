@@ -6,68 +6,68 @@
 All colors MUST be HSL.
 */
 
-@layer base {
-  :root {
+/* @layer base {
+  :root { */
     /* High contrast base colors for optimal readability */
-    --background: 0 0% 100%;
-    --foreground: 224 71% 4%;
+    /* --background: 0 0% 100%;
+    --foreground: 224 71% 4%; */
 
     /* Card system with enhanced contrast */
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    /* --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%; */
 
     /* Popover with strong contrast */
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    /* --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%; */
 
     /* Primary brand - enhanced contrast */
-    --primary: 200 85% 40%;
+    /* --primary: 200 85% 40%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 200 85% 50%;
+    --primary-glow: 200 85% 50%; */
 
     /* Secondary - optimized gray scale */
-    --secondary: 210 40% 92%;
+    /* --secondary: 210 40% 92%;
     --secondary-foreground: 200 50% 20%;
 
     /* Muted - enhanced for form labels */
-    --muted: 210 40% 94%;
-    --muted-foreground: 215 25% 20%;
+    /* --muted: 210 40% 94%;
+    --muted-foreground: 215 25% 20%; */
 
     /* Accent - balanced teal */
-    --accent: 175 60% 40%;
-    --accent-foreground: 0 0% 100%;
+    /* --accent: 175 60% 40%;
+    --accent-foreground: 0 0% 100%; */
 
     /* Success - clear and accessible */
-    --success: 142 76% 30%;
-    --success-foreground: 0 0% 100%;
+    /* --success: 142 76% 30%;
+    --success-foreground: 0 0% 100%; */ */
 
     /* Destructive - accessible red */
-    --destructive: 0 84% 50%;
-    --destructive-foreground: 0 0% 100%;
+    /* --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%; */
 
     /* Form elements - enhanced contrast */
-    --border: 214 32% 75%;
+    /* --border: 214 32% 75%;
     --input: 0 0% 100%;
-    --ring: 200 85% 40%;
+    --ring: 200 85% 40%; */
 
     /* Enhanced gradients with better contrast */
-    --gradient-primary: linear-gradient(135deg, hsl(200 85% 40%), hsl(200 85% 50%));
+    /* --gradient-primary: linear-gradient(135deg, hsl(200 85% 40%), hsl(200 85% 50%));
     --gradient-hero: linear-gradient(135deg, hsl(200 85% 40%) 0%, hsl(175 60% 40%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 94%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 94%)); */
 
     /* Enhanced shadows for better depth */
-    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.12), 0 1px 2px 0 hsl(0 0% 0% / 0.08);
+    /* --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.12), 0 1px 2px 0 hsl(0 0% 0% / 0.08);
     --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.15), 0 2px 4px -1px hsl(0 0% 0% / 0.08);
-    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.15), 0 4px 6px -2px hsl(0 0% 0% / 0.08);
+    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.15), 0 4px 6px -2px hsl(0 0% 0% / 0.08); */
 
     /* Smooth transitions for better UX */
-    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; */
 
     /* Sidebar colors */
-    --sidebar-background: 0 0% 98%;
+    /* --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -106,10 +106,10 @@ All colors MUST be HSL.
 
     --border: 215 28% 20%;
     --input: 215 28% 15%;
-    --ring: 200 85% 60%;
+    --ring: 200 85% 60%; */
     
     /* Dark sidebar */
-    --sidebar-background: 240 5.9% 10%;
+    /* --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
@@ -118,11 +118,11 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
+} */
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
 
   body {
