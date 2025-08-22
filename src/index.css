@@ -121,7 +121,7 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .border-border {
+  .border-color {
     border-color: hsl(var(--border));
   }
 }
