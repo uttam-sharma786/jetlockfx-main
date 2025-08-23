@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+
+All colors MUST be HSL. */
 
 @layer base {
   :root {
@@ -51,14 +51,29 @@ All colors MUST be HSL.
     --ring: 200 85% 40%;
 
     /* Enhanced gradients with better contrast */
-    --gradient-primary: linear-gradient(135deg, hsl(200 85% 40%), hsl(200 85% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(200 85% 40%) 0%, hsl(175 60% 40%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 94%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(200 85% 40%),
+      hsl(200 85% 50%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(200 85% 40%) 0%,
+      hsl(175 60% 40%) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(0 0% 100%),
+      hsl(210 40% 94%)
+    );
 
     /* Enhanced shadows for better depth */
-    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.12), 0 1px 2px 0 hsl(0 0% 0% / 0.08);
-    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.15), 0 2px 4px -1px hsl(0 0% 0% / 0.08);
-    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.15), 0 4px 6px -2px hsl(0 0% 0% / 0.08);
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.12),
+      0 1px 2px 0 hsl(0 0% 0% / 0.08);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.15),
+      0 2px 4px -1px hsl(0 0% 0% / 0.08);
+    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.15),
+      0 4px 6px -2px hsl(0 0% 0% / 0.08);
 
     /* Smooth transitions for better UX */
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,7 +122,7 @@ All colors MUST be HSL.
     --border: 215 28% 20%;
     --input: 215 28% 15%;
     --ring: 200 85% 60%;
-    
+
     /* Dark sidebar */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -120,8 +135,15 @@ All colors MUST be HSL.
   }
 }
 
-@layer utilities {
-  .border-color {
+@layer base {
+  * {
+    border-width: 1px;
+    border-style: solid;
     border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
